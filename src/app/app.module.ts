@@ -9,6 +9,7 @@ import { CitiesEndpoint } from './services/cities/cities-endpoint.service';
 import { CitiesService } from './services/cities/cities.service';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxDatatableModule
   ],
   providers: [
     BaseService
