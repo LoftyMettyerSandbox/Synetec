@@ -4,12 +4,7 @@
       <h4>Cities list</h4>
       <div class="table-responsive">
 
-        <ngx-datatable *ngIf="cities" [rows]="cities">
-          <ngx-datatable-column name="Name" prop="Name">
-          </ngx-datatable-column>
-        </ngx-datatable>
-
-        <ngx-datatable id="city-table" *ngIf="cities" [rows]="cities" class="table table-bordred table-striped"
+        <ngx-datatable id="city-table" *ngIf="cities" [rows]="cities" class="ngx-datatable"
                        [columnMode]="'force'" [rowHeight]="'auto'" [loadingIndicator]="true" [footerHeight]="50"
                        [externalSorting]="false" [sortType]="'single'">
 
