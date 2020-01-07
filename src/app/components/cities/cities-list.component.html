@@ -1,37 +1,37 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h4>Cities list</h4>
-      <div class="table-responsive">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Cities list</h4>
+            <div class="table-responsive">
 
-        <ngx-datatable id="city-table" *ngIf="cities" [rows]="cities" class="ngx-datatable"
-                       [columnMode]="'force'" [rowHeight]="'auto'" [loadingIndicator]="true" [footerHeight]="50"
-                       [externalSorting]="false" [sortType]="'single'">
+                <ngx-datatable id="city-table" *ngIf="cities" [rows]="cities" class="ngx-datatable"
+                    [columnMode]="'force'" [rowHeight]="'auto'" [loadingIndicator]="true" [footerHeight]="50"
+                    [externalSorting]="false" [sortType]="'single'">
 
-          <ngx-datatable-column name="Name">
-          </ngx-datatable-column>
+                    <ngx-datatable-column name="Name">
+                    </ngx-datatable-column>
 
-          <ngx-datatable-column name="Description">
-          </ngx-datatable-column>
+                    <ngx-datatable-column name="Description">
+                    </ngx-datatable-column>
 
-          <ngx-datatable-column name="Delete">
-            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
-              <p data-placement="top" data-toggle="tooltip" title="Delete">
-                <button class="btn btn-danger btn-xs" data-title="Delete"
-                        (click)="deleteCity(row.id)">
-                  <span class="glyphicon glyphicon-trash"></span>
-                </button>
-              </p>
-            </ng-template>
-          </ngx-datatable-column>
+                    <ngx-datatable-column name="Delete">
+                        <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value"
+                            let-row="row">
+                            <p data-placement="top" data-toggle="tooltip" title="Delete">
+                                <button class="btn btn-danger btn-xs" data-title="Delete" (click)="deleteCity(row.id)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </p>
+                        </ng-template>
+                    </ngx-datatable-column>
 
-        </ngx-datatable>
+                </ngx-datatable>
 
-        <table *ngIf="!cities">
-          None
-        </table>
+                <table *ngIf="!cities">
+                    None
+                </table>
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
