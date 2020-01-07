@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+    "\\e2e",
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
@@ -10,6 +11,6 @@
     "\\src\\app\\services\\cities",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\components\\cities\\cities-list.component.ts",
+  "SelectedNode": "\\src\\app\\components\\cities\\cities-list.component.html",
   "PreviewInSolutionExplorer": false
 }
