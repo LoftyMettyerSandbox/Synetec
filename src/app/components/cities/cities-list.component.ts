@@ -13,5 +13,8 @@ export class CitiesListComponent implements OnInit{
     constructor() {}
 
     ngOnInit(): void {
+
+
+        
     }
 }

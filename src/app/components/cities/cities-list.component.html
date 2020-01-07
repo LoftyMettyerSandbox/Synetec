@@ -3,6 +3,14 @@
         <div class="col-md-12">
             <h4>Cities list</h4>
             <div class="table-responsive">
+
+                <ngx-datatable *ngIf="cities" class="table table-bordred table-striped" [rows]="cities"
+                    [columnMode]="'force'" [rowHeight]="'auto'" [loadingIndicator]="true" [footerHeight]="50"
+                    [externalSorting]="false" [sortType]="'single'">
+                </ngx-datatable>
+
+
+                
                 <table id="city-table" class="table table-bordred table-striped">
                     <thead>
                         <th>Name</th>
