@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ICity } from "../../models/city.model";
-import { HttpClient } from '@angular/common/http';
+import { CitiesEndpoint } from '../../services/cities/cities-endpoint.service'
 
 @Component({
     selector: 'cities-list',
@@ -11,25 +11,20 @@ import { HttpClient } from '@angular/common/http';
 export class CitiesListComponent implements OnInit {
 
     cities: ICity[];
-    constructor(private httpClient: HttpClient) { }
+    constructor(private cityEndpoint: CitiesEndpoint) { }
 
     ngOnInit(): void {
+        this.getCities();
+    }
 
-        this.httpClient.get("http://localhost:53538/api/cities")
-            .subscribe((data: any) => {
-                this.cities = data;
-            });
+    getCities() {
+        this.cityEndpoint.getCities().then(response => {
+            this.cities = response;
+        });
     }
 
     deleteCity(id: number) {
-
-        this.httpClient.delete("http://localhost:53538/api/cities/delete-city/" + id)
-            .subscribe(res => {
-                alert("Deleted");
-            }, err => {
-                alert("Not deleted");
-            });
-
+        this.cityEndpoint.deleteCity(id);
     }
 
 
