@@ -4,6 +4,7 @@ import { BaseService } from "../base.service";
 import { Observable } from "rxjs/Observable";
 import { HttpClient } from "@angular/common/http";
 import { ICity } from "../../models/city.model";
+import { ExceptionInfo } from "_debugger";
 
 @Injectable()
 export class CitiesEndpoint extends BaseService {
@@ -31,11 +32,11 @@ export class CitiesEndpoint extends BaseService {
 
             this._httpClient.delete(this._baseURL + "/delete-city/" + id)
                 .subscribe(res => {
-                    alert("City deleted");
                     resolve(true);
                 }, err => {
-                    console.log("Cannot delete city id: " + id);
-                    resolve(false);
+                    // Have to manually put breakpoints in backend service to trip this code.
+                    console.log("Error : " + err.error);
+                    reject(err);
                 });
 
         });

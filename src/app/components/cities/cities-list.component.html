@@ -18,7 +18,7 @@
                         <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value"
                             let-row="row">
                             <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                <button class="btn btn-danger btn-xs" data-title="Delete" (click)="deleteCity(row.id)">
+                                <button class="btn btn-danger btn-xs" data-title="Delete" (click)="deleteCity(row.id, row.name)">
                                     <span class="glyphicon glyphicon-trash"></span>
                                 </button>
                             </p>
