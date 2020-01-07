@@ -22,7 +22,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     NgxDatatableModule
   ],
   providers: [
-    BaseService
+    BaseService,
+    CitiesEndpoint
   ],
   bootstrap: [AppComponent]
 })
